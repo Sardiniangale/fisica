@@ -14,14 +14,19 @@ def vector_addition_r3():
     y2 = float(input("y: "))
     z2 = float(input("z: "))
 
+    print("Cosa sono le coordinate del 3nd vettore (x, y, z):")
+    x3 = float(input("x: "))
+    y3 = float(input("y: "))
+    z3 = float(input("z: "))
 
+    
     v1 = np.array([x1, y1, z1])
     v2 = np.array([x2, y2, z2])
+    v3 = np.array([x3, y3, z3])
+   
+    b = v1 + v2 + v3
 
-
-    x = v1 + v2
-
-    print("La somma dei due vettori e:", x)
+    print("La somma dei vettori e:", b)
 
 
 
