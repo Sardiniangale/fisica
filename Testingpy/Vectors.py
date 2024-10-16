@@ -19,16 +19,16 @@ def vector_addition_r3():
     y3 = float(input("y: "))
     z3 = float(input("z: "))
 
-    
+
     v1 = np.array([x1, y1, z1])
     v2 = np.array([x2, y2, z2])
     v3 = np.array([x3, y3, z3])
-   
+
     b = v1 + v2 + v3
 
     print("La somma dei vettori e:", b)
 
-
+print("22")
 
 #I stole this, no idea why its needed
 if __name__ == "__main__":
