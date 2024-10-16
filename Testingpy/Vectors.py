@@ -14,7 +14,7 @@ def vector_addition_r3():
     y2 = float(input("y: "))
     z2 = float(input("z: "))
 
-    print("Cosa sono le coordinate del 3nd vettore (x, y, z):")
+    print("Cosa sono le coordinate del 3rd vettore (x, y, z):")
     x3 = float(input("x: "))
     y3 = float(input("y: "))
     z3 = float(input("z: "))
