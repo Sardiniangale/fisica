@@ -14,4 +14,4 @@ for i in range(10):
         print (f' not {i} but 69')
 
 while i<420:
-    print (126)
+    print ('Franco126')
