@@ -28,7 +28,7 @@ def vector_addition_r3():
 
     print("La somma dei vettori e:", b)
 
-
+print("22")
 
 #I stole this, no idea why its needed
 if __name__ == "__main__":
