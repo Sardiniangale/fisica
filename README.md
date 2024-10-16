@@ -3,7 +3,7 @@
 
  CIAO :) 
 
- qui chi sara fisica e minchiate 
+ qui ci sarà fisica e minchiate 
 
 
  
