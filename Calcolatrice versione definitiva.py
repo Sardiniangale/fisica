@@ -20,7 +20,7 @@ if a.lower() == 'yes':
             print(f'{i} is odd')
 
 
-if a.lower()=='no':
+elif a.lower()=='no':
 
     if n//2!=(n-1)//2:
         print(f'{n} is even')
