@@ -1,0 +1,87 @@
+Running auto-py-to-exe v2.44.2
+Building directory: C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68
+Provided command: pyinstaller --noconfirm --onedir --console  "C:\Users\Giacomo\Documents\loops.py"
+Recursion Limit is set to 5000
+Executing: pyinstaller --noconfirm --onedir --console C:\Users\Giacomo\Documents\loops.py --distpath C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\application --workpath C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\build --specpath C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68
+
+22282 INFO: PyInstaller: 6.11.0, contrib hooks: 2024.8
+22300 INFO: Python: 3.12.7
+22357 INFO: Platform: Windows-10-10.0.19045-SP0
+22363 INFO: Python environment: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0
+22379 INFO: wrote C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\loops.spec
+22416 INFO: Module search paths (PYTHONPATH):
+['C:\\Users\\Giacomo\\eclipse-workspace',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0\\python312.zip',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0\\DLLs',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0\\Lib',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0',
+ 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages',
+ 'C:\\Program '
+ 'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0\\Lib\\site-packages',
+ 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\setuptools\\_vendor',
+ 'C:\\Users\\Giacomo\\Documents']
+24442 INFO: checking Analysis
+24460 INFO: Building Analysis because Analysis-00.toc is non existent
+24476 INFO: Running Analysis Analysis-00.toc
+24479 INFO: Target bytecode optimization level: 0
+24492 INFO: Initializing module dependency graph...
+24510 INFO: Initializing module graph hook caches...
+24642 INFO: Analyzing base_library.zip ...
+26564 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+30953 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+32385 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+33465 INFO: Caching module dependency graph...
+33684 INFO: Looking for Python shared library...
+33701 INFO: Using Python shared library: C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2032.0_x64__qbz5n2kfra8p0\python312.dll
+33716 INFO: Analyzing C:\Users\Giacomo\Documents\loops.py
+33783 INFO: Processing standard module hook 'hook-numpy.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+36113 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+36385 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+38586 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+38984 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+39193 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks'
+43051 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+43409 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+43439 INFO: SetuptoolsInfo: initializing cached setuptools info...
+51296 INFO: Processing module hooks (post-graph stage)...
+51412 INFO: Performing binary vs. data reclassification (4 entries)
+51442 INFO: Looking for ctypes DLLs
+51482 INFO: Analyzing run-time hooks ...
+51490 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+51508 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+51527 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\PyInstaller\\hooks\\rthooks'
+51565 INFO: Looking for dynamic libraries
+52903 INFO: Extra DLL search directories (AddDllDirectory): ['C:\\Users\\Giacomo\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\numpy.libs']
+52907 INFO: Extra DLL search directories (PATH): []
+53766 INFO: Warnings written to C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\build\loops\warn-loops.txt
+53868 INFO: Graph cross-reference written to C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\build\loops\xref-loops.html
+54026 INFO: checking PYZ
+54039 INFO: Building PYZ because PYZ-00.toc is non existent
+54054 INFO: Building PYZ (ZlibArchive) C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\build\loops\PYZ-00.pyz
+55311 INFO: Building PYZ (ZlibArchive) C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\build\loops\PYZ-00.pyz completed successfully.
+55340 INFO: checking PKG
+55349 INFO: Building PKG because PKG-00.toc is non existent
+55365 INFO: Building PKG (CArchive) loops.pkg
+55511 INFO: Building PKG (CArchive) loops.pkg completed successfully.
+55523 INFO: Bootloader C:\Users\Giacomo\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\PyInstaller\bootloader\Windows-64bit-intel\run.exe
+55537 INFO: checking EXE
+55553 INFO: Building EXE because EXE-00.toc is non existent
+55559 INFO: Building EXE from EXE-00.toc
+55564 INFO: Copying bootloader EXE to C:\Users\Giacomo\AppData\Local\Temp\tmp5ps0is68\build\loops\loops.exe
+55738 INFO: Copying icon to EXE
+55820 INFO: Copying 0 resources to EXE
+55836 INFO: Embedding manifest in EXE
+55904 INFO: Appending PKG archive to EXE
+55927 INFO: Fixing EXE headers
+56291 INFO: Building EXE from EXE-00.toc completed successfully.
+56310 INFO: checking COLLECT
+56324 INFO: Building COLLECT because COLLECT-00.toc is non existent
+56340 INFO: Building COLLECT COLLECT-00.toc
+56768 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+
+Moving project to: C:\Users\Giacomo\eclipse-workspace\output
+Complete.
