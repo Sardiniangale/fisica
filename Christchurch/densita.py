@@ -13,20 +13,20 @@ materials = {
     "Material A": {
         "masses": np.array([]),
         "volumes": np.array(]),
-        "mass_uncertainties": np.array([]),  
-        "volume_uncertainties": np.array([])  
-    },
+        "mass_uncertainties": np.array([0,01]),  
+        "volume_uncertainties": np.array([4.4816524592089,3.01723347681125,2.11464428888324,1.00366950579773,0.58041579655495])  
+ },
     "Material B": {
         "masses": np.array([]),
         "volumes": np.array([]),
-        "mass_uncertainties": np.array([]),  
-        "volume_uncertainties": np.array([])  
-    },
+        "mass_uncertainties": np.array([0,01]),  
+        "volume_uncertainties": np.array([5.65212195704233,2.80162656269473,1.38105892221567,4.29384324662944,2.73065638846688,])  
+    }, 
     "Material C": {
         "masses": np.array([]),
         "volumes": np.array([]),
-        "mass_uncertainties": np.array([]),  
-        "volume_uncertainties": np.array([])  
+        "mass_uncertainties": np.array([0,01]),  
+        "volume_uncertainties": np.array([1.97566042733464,5.9352107253293,1.6108751890243,3.4845439,5.65212195704233])  
     }
 }
 
