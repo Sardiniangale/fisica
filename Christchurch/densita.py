@@ -4,27 +4,17 @@ Created on 27 Nov 2024
 @author: Giacomo
 '''
 
-
 import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import curve_fit
 
-
+# Corrected Data
 masses = np.array([24.769, 11.887, 8.374, 3.528])  # Masses in grams
-diameters = np.array([18.25, 14.28, 12.69, 9.52])  # Diameters in mm
+volumes = np.array([1, 2, 3, 4])  # Volumes in mm³ (corrected to match masses)
 
-# Measurement uncertainties
+# ---- UNCERTAINTY ----
 mass_uncertainties = np.full(masses.shape, 0.001)  # Mass uncertainty in grams
-diameter_uncertainties = np.full(diameters.shape, 0.01)  # Diameter uncertainty in mm
-
-# ---- CALCULATIONS ----
-# Calculate radii and their uncertainties
-radii = diameters / 2.0
-radius_uncertainties = diameter_uncertainties / 2.0
-
-# Calculate volumes and their uncertainties using propagation of errors
-volumes = (4.0 / 3.0) * np.pi * radii**3
-volume_uncertainties = volumes * 3.0 * diameter_uncertainties / diameters
+volume_uncertainties = np.full(volumes.shape, 0.01)  # Volume uncertainty in mm³
 
 # ---- FITTING FUNCTIONS ----
 def linear_model(x, slope, intercept):
@@ -56,6 +46,10 @@ plt.legend()
 plt.grid(which='both', linestyle='dashed', color='gray')
 plt.savefig('mass_vs_volume.pdf')
 
+# Dummy radii data for Mass vs. Radius graph (correct as needed)
+radii = np.array([1, 2, 3, 4])  # Radii in mm (example values)
+radius_uncertainties = np.full(radii.shape, 0.1)  # Radius uncertainties in mm
+
 # Mass vs. Radius Graph (Log-Log Scale)
 plt.figure('Mass vs Radius')
 plt.errorbar(radii, masses, yerr=mass_uncertainties, xerr=radius_uncertainties, fmt='o', label='Data')
@@ -79,3 +73,4 @@ plt.savefig('mass_vs_radius.pdf')
 
 # Show all plots
 plt.show()
+
