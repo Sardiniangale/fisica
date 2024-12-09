@@ -11,21 +11,21 @@ from scipy.optimize import curve_fit
 # ---- DATA INPUT ----
 materials = {
     "Material A": {
-        "masses": np.array([]),
-        "volumes": np.array(]),
-        "mass_uncertainties": np.array([0,01]),  
+        "masses": np.array([44.865, 24.818, 11.869, 3.526, 2.086]),
+        "volumes": np.array([5751.97527306092, 3177.40902152194, 1864.2997162751, 609.601240035926, 268.082573106329]),
+        "mass_uncertainties": np.array([0.01]),  
         "volume_uncertainties": np.array([4.4816524592089,3.01723347681125,2.11464428888324,1.00366950579773,0.58041579655495])  
  },
     "Material B": {
-        "masses": np.array([]),
-        "volumes": np.array([]),
-        "mass_uncertainties": np.array([0,01]),  
+        "masses": np.array([15.806, 5.863, 1.456, 8.005, 4.836]),
+        "volumes": np.array([6640.81842255279, 2170.49786383664, 570.902905510366, 2995.314465, 1802.894625]),
+        "mass_uncertainties": np.array([0.01])  ,
         "volume_uncertainties": np.array([5.65212195704233,2.80162656269473,1.38105892221567,4.29384324662944,2.73065638846688,])  
     }, 
     "Material C": {
-        "masses": np.array([]),
-        "volumes": np.array([]),
-        "mass_uncertainties": np.array([0,01]),  
+        "masses": np.array([10.764, 34.967, 4.713, 28.975, 29.501]),
+        "volumes": np.array([1279.05239570512, 4125.1332, 560.488475, 3315.35179114825, 2318.49537834927]),
+        "mass_uncertainties": np.array([0.01]),
         "volume_uncertainties": np.array([1.97566042733464,5.9352107253293,1.6108751890243,3.4845439,5.65212195704233])  
     }
 }
