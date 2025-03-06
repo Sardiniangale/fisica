@@ -1,4 +1,4 @@
-'''
+f'''
 Created on 27 Nov 2024
 
 @author: Giacomo
@@ -10,23 +10,23 @@ from scipy.optimize import curve_fit
 
 # ---- DATA INPUT ----
 materials = {
-    "Material A": {
+    "Ottone (A)": {
         "masses": np.array([44.865, 24.818, 11.869, 3.526, 2.086]),
         "volumes": np.array([5751.97527306092, 3177.40902152194, 1864.2997162751, 609.601240035926, 268.082573106329]),
-        "mass_uncertainties": np.array([0.01]),  
-        "volume_uncertainties": np.array([4.4816524592089,3.01723347681125,2.11464428888324,1.00366950579773,0.58041579655495])  
+        "mass_uncertainties": np.array([0.01]),
+        "volume_uncertainties": np.array([4.4816524592089,3.01723347681125,2.11464428888324,1.00366950579773,0.58041579655495])
  },
-    "Material B": {
+    "Alluminio (B)": {
         "masses": np.array([15.806, 5.863, 1.456, 8.005, 4.836]),
         "volumes": np.array([6640.81842255279, 2170.49786383664, 570.902905510366, 2995.314465, 1802.894625]),
         "mass_uncertainties": np.array([0.01])  ,
-        "volume_uncertainties": np.array([5.65212195704233,2.80162656269473,1.38105892221567,4.29384324662944,2.73065638846688,])  
-    }, 
-    "Material C": {
+        "volume_uncertainties": np.array([5.65212195704233,2.80162656269473,1.38105892221567,4.29384324662944,2.73065638846688,])
+    },
+    "Acciaio (C)": {
         "masses": np.array([10.764, 34.967, 4.713, 28.975, 29.501]),
         "volumes": np.array([1279.05239570512, 4125.1332, 560.488475, 3315.35179114825, 2318.49537834927]),
         "mass_uncertainties": np.array([0.01]),
-        "volume_uncertainties": np.array([1.97566042733464,5.9352107253293,1.6108751890243,3.4845439,5.65212195704233])  
+        "volume_uncertainties": np.array([1.97566042733464,5.9352107253293,1.6108751890243,3.4845439,5.65212195704233])
     }
 }
 
@@ -37,7 +37,7 @@ def linear_model(x, slope, intercept):
     return slope * x + intercept
 
 # ---- PLOTTING AND ANALYSIS ----
-plt.figure('Mass vs Volume')
+plt.figure('Massa vs Volume')
 
 for material, data in materials.items():
     masses = data["masses"]
@@ -47,14 +47,14 @@ for material, data in materials.items():
 
     # Plot data with individual error bars
     plt.errorbar(
-        volumes, masses, 
-        yerr=mass_uncertainties, xerr=volume_uncertainties, 
+        volumes, masses,
+        yerr=mass_uncertainties, xerr=volume_uncertainties,
         fmt='o', label=f'{material} Data'
     )
 
     # Perform linear fit
     popt, pcov = curve_fit(
-        linear_model, volumes, masses, 
+        linear_model, volumes, masses,
         sigma=mass_uncertainties,  # Weight fit by mass uncertainties
         absolute_sigma=True  # Treat uncertainties as absolute
     )
@@ -67,16 +67,16 @@ for material, data in materials.items():
     # Generate and plot the linear fit line
     fit_volumes = np.linspace(0, max(volumes) * 1.1, 100)
     plt.plot(
-        fit_volumes, linear_model(fit_volumes, slope, intercept), 
+        fit_volumes, linear_model(fit_volumes, slope, intercept),
         label=f'{material} Fit', linestyle='--'
     )
 
 # Add labels, legend, and grid
-plt.xlabel('Volume [cm³]')
-plt.ylabel('Mass [g]')
+plt.xlabel('Volume (cm³)')
+plt.ylabel('Mass (g)')
 plt.legend()
 plt.grid(which='both', linestyle='dashed', color='gray')
-plt.title('Mass vs Volume for Different Materials with Individual Uncertainties')
+plt.title('Graphico di densita')
 plt.savefig('mass_vs_volume_multimaterial_individual_uncertainties.pdf')
 
 
