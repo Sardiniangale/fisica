@@ -104,9 +104,8 @@ Obbiettivo esperienza
 
 \begin_layout Standard
 L'obbiettivo dell'esperienza è quello di verificare che nonostante oggetti abbiano forme diverse,
- se questi sono costituiti dalla stessa sostanza,
- allora il rapporto tra la misura della massa e la misura del volume di ciscuno è uguale allo stesso rapporto calcolato per gli altri oggetti,
- a patto che le misurazioni di massa e volume vengano eseguite alle stesse condizioni di temperatura e pressione per tutti gli oggetti.
+ se questi sono costituiti dalla stessa sostanza e misurati alle medesime condizioni di pressione e temperatura,
+ allora tra la misura della loro massa e la misura del loro volume è presente una proporzionalità diretta.
 \end_layout
 
 \begin_layout Part*
@@ -145,8 +144,13 @@ una serie di solidi di alluminio,
 -cinque sfere di acciaio
 \end_layout
 
-\begin_layout Section*
-Cenni Teorici
+\begin_layout Part*
+Cenni teorici
+\end_layout
+
+\begin_layout Standard
+La densità è definita come massa per unità di volume:
+ d
 \end_layout
 
 \end_body

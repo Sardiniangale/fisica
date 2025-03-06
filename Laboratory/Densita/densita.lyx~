@@ -99,7 +99,14 @@ Flavia e Giacomo
 \end_layout
 
 \begin_layout Part*
-Part we dont know
+Obbiettivo esperienza
+\end_layout
+
+\begin_layout Standard
+L'obbiettivo dell'esperienza è quello di verificare che nonostante oggetti abbiano forme diverse,
+ se questi sono costituiti dalla stessa sostanza,
+ allora il rapporto tra la misura della massa e la misura del volume di ciscuno è uguale allo stesso rapporto calcolato per gli altri oggetti,
+ a patto che le misurazioni di massa e volume vengano eseguite alle stesse condizioni di temperatura e pressione per tutti gli oggetti.
 \end_layout
 
 \begin_layout Part*
@@ -120,7 +127,26 @@ Calibro ventesimale (risoluzione 0,05 mm)
 
 \begin_layout Enumerate
 una serie di solidi di alluminio,
- acciaio e ottone
+ acciaio e ottone aventi forme diverse,
+ in particolare
+\end_layout
+
+\begin_layout Verse
+-due parallelepipedi retti e tre cilindri di alluminio
+\end_layout
+
+\begin_layout Verse
+-due parallelepipedi a base quadrata retti,
+ due cilindri,
+ un cilindro a base esagonale di ottone
+\end_layout
+
+\begin_layout Verse
+-cinque sfere di acciaio
+\end_layout
+
+\begin_layout Part*
+Cenni teorici
 \end_layout
 
 \begin_layout Standard
