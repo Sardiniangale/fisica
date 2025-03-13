@@ -12,13 +12,13 @@ def simulate_walk(verbose=False):
         points.append((new_x, new_y))
         if verbose:
             print(f"Step {step + 1}:")
-            print(f"Random angle: {np.degrees(phi):.2f}°")
+            print(f"Angle: {np.degrees(phi):.2f}°")
             print(f"New coordinates: ({new_x:.4f}, {new_y:.4f})\n")
     final_x, final_y = points[-1]
     distance = np.sqrt(final_x**2 + final_y**2)
     return points, distance
 
-# Run the initial simulation and plot
+#sim
 points, dist = simulate_walk(verbose=True)
 
 x_coords = [p[0] for p in points]

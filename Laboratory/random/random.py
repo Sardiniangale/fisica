@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 #origin
 points = [(0.0, 0.0)]
 
-for step in range(3):
+for step in range(100):
     #randomize
     phi = np.random.uniform(0, 2 * np.pi)
     
@@ -42,3 +42,31 @@ plt.legend()
 plt.grid(True)
 plt.axis('equal')  # Ensure the scale is the same on both axes
 plt.show()
+
+
+distances = []
+for _ in range(1000):
+    _, distance = simulate_walk(verbose=False)
+    distances.append(distance)
+
+# Plot histogram with Gaussian fit
+plt.figure(figsize=(8, 6))
+mu = np.mean(distances)
+sigma = np.std(distances)
+
+count, bins, _ = plt.hist(distances, bins=30, density=True, alpha=0.6, color='g', label='Distance Distribution')
+
+# Gaussian fit
+x = np.linspace(min(distances), max(distances), 100)
+gaussian = (1/(sigma * np.sqrt(2 * np.pi))) * np.exp(-(x - mu)**2 / (2 * sigma**2))
+plt.plot(x, gaussian, 'r-', linewidth=2, label='Gaussian Fit')
+
+plt.title('Random Walk Guass')
+plt.xlabel('Distansa')
+plt.ylabel('Y')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+
+
