@@ -1,60 +1,72 @@
 import numpy as np
-import matplotlib.pylab as plt
+import matplotlib.pyplot as plt
 
-# First try making the random walk
-path = [(0,0)]
-for i in range(100):
-    random_radian = np.random.random() * 2 * 3.1415
-    x_add = np.cos(random_radian)
-    y_add = np.sin(random_radian)
+def simulate_walk(verbose=False):
+    points = [(0.0, 0.0)]
+    for step in range(100):
+        phi = np.random.uniform(0, 2 * np.pi)
+        dx = np.cos(phi)
+        dy = np.sin(phi)
+        new_x = points[-1][0] + dx
+        new_y = points[-1][1] + dy
+        points.append((new_x, new_y))
+        
+        if verbose:
+            print(f"Step {step + 1}:")
+            print(f"Random angle: {np.degrees(phi):.2f}°")
+            print(f"New coordinates: ({new_x:.4f}, {new_y:.4f})\n")
     
-    last_x = path[-1][0]
-    last_y = path[-1][1]
-    new_x = last_x + x_add
-    new_y = last_y + y_add
-    path.append( (new_x, new_y) )
-    
-    print(f"Step {i+1}: Angle {np.degrees(random_radian):.1f}°")
-    print(f"Moved to ({new_x:.3f}, {new_y:.3f})\n")
+    # Calculate final distance after all steps
+    final_x, final_y = points[-1]
+    distance = np.sqrt(final_x**2 + final_y**2)
+    return points, distance
 
-# Drawing part
-xs = [p[0] for p in path]
-ys = [p[1] for p in path]
+# Initial simulation and plot
+points, _ = simulate_walk(verbose=True)
 
-plt.figure()
-plt.plot(xs, ys, 'b-')
-plt.plot(xs, ys, 'ro')
-plt.title("My Walk")
-plt.grid()
+# Plot setup
+x_coords = [p[0] for p in points]
+y_coords = [p[1] for p in points]
+
+plt.figure(figsize=(8, 8))
+plt.plot(x_coords, y_coords, 'bo-', markersize=8, label='Path')
+plt.plot(x_coords[0], y_coords[0], 'go', markersize=8, label='Origin')
+
+# Annotate steps
+for i, (x, y) in enumerate(points):
+    plt.text(x, y, f' {i}', fontsize=12, ha='left', va='bottom')
+
+plt.title('Random Walk Visualization')
+plt.xlabel('X Coordinate')
+plt.ylabel('Y Coordinate')
+plt.legend()
+plt.grid(True)
+plt.axis('equal')
 plt.show()
 
-# Now do the 1000 walks part
-final_distances = []
-
+# Run 1000 simulations
+distances = []
 for _ in range(1000):
-    temp_path = [(0,0)]
-    for _ in range(100):
-        rand_angle = np.random.uniform(0, 2*np.pi)
-        temp_x = temp_path[-1][0] + np.cos(rand_angle)
-        temp_y = temp_path[-1][1] + np.sin(rand_angle)
-        temp_path.append( (temp_x, temp_y) )
-    
-    end_x = temp_path[-1][0]
-    end_y = temp_path[-1][1]
-    how_far = (end_x**2 + end_y**2)**0.5
-    final_distances.append(how_far)
+    _, distance = simulate_walk()
+    distances.append(distance)
 
-# Make the histogram
-plt.figure()
-plt.hist(final_distances, bins=25, color='orange', edgecolor='black')
+# Statistical analysis
+mu = np.mean(distances)
+sigma = np.std(distances)
 
-avg = sum(final_distances)/len(final_distances)
-std = np.std(final_distances)
-x_vals = np.linspace(min(final_distances), max(final_distances), 100)
-curve = np.exp(-(x_vals-avg)**2/(2*std**2)) / (std*np.sqrt(2*np.pi))  # Oops line break
-plt.plot(x_vals, curve, 'r-')
+# Histogram plot
+plt.figure(figsize=(8, 6))
+count, bins, _ = plt.hist(distances, bins=30, density=True, 
+                         alpha=0.6, color='teal', label='Distance Frequency')
 
-plt.xlabel("How Far")
-plt.ylabel("Times Happened")
-plt.title("Distance Spread")
+# Gaussian curve overlay
+x = np.linspace(min(distances), max(distances), 100)
+gaussian = (1/(sigma * np.sqrt(2 * np.pi))) * np.exp(-(x - mu)**2 / (2 * sigma**2))
+plt.plot(x, gaussian, 'maroon', linewidth=2, label='Normal Distribution')
+
+plt.title('Gaussian Distribution of Final Distances')
+plt.xlabel('Distance from Origin')
+plt.ylabel('Probability Density')
+plt.legend()
+plt.grid(True)
 plt.show()
