@@ -99,7 +99,13 @@ Flavia e Giacomo
 \end_layout
 
 \begin_layout Part*
-Part we dont know
+Obbiettivo esperienza
+\end_layout
+
+\begin_layout Standard
+L'obbiettivo dell'esperienza è quello di verificare che nonostante oggetti abbiano forme diverse,
+ se questi sono costituiti dalla stessa sostanza e misurati alle medesime condizioni di pressione e temperatura,
+ allora tra la misura della loro massa e la misura del loro volume è presente una proporzionalità diretta.
 \end_layout
 
 \begin_layout Part*
@@ -120,10 +126,70 @@ Calibro ventesimale (risoluzione 0,05 mm)
 
 \begin_layout Enumerate
 una serie di solidi di alluminio,
- acciaio e ottone
+ acciaio e ottone aventi forme diverse,
+ in particolare
+\end_layout
+
+\begin_layout Verse
+-due parallelepipedi retti e tre cilindri di alluminio
+\end_layout
+
+\begin_layout Verse
+-due parallelepipedi a base quadrata retti,
+ due cilindri,
+ un cilindro a base esagonale di ottone
+\end_layout
+
+\begin_layout Verse
+-cinque sfere di acciaio
+\end_layout
+
+\begin_layout Part*
+Cenni teorici
 \end_layout
 
 \begin_layout Standard
+La densità è definita come massa per unità di volume:
+ 
+\begin_inset Formula $d=m/v$
+\end_inset
+
+.
+ Corpi di forme diverse hanno lo stesso valore di densità se:
+\end_layout
+
+\begin_layout Standard
+-sono fatti della sostanza
+\end_layout
+
+\begin_layout Standard
+-le misure di massa e volume dei diversi corpi sono prese alle stesse condizioni di massa e volume
+\end_layout
+
+\begin_layout Part*
+Presa dati
+\end_layout
+
+\begin_layout Standard
+Per la presa dati sono stati utilizzati:
+\end_layout
+
+\begin_layout Enumerate
+calibro Palmer,
+ 
+\end_layout
+
+\begin_layout Itemize
+misura del 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
 
 \end_layout
 

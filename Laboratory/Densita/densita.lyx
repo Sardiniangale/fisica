@@ -104,9 +104,8 @@ Obbiettivo esperienza
 
 \begin_layout Standard
 L'obbiettivo dell'esperienza è quello di verificare che nonostante oggetti abbiano forme diverse,
- se questi sono costituiti dalla stessa sostanza,
- allora il rapporto tra la misura della massa e la misura del volume di ciscuno è uguale allo stesso rapporto calcolato per gli altri oggetti,
- a patto che le misurazioni di massa e volume vengano eseguite alle stesse condizioni di temperatura e pressione per tutti gli oggetti.
+ se questi sono costituiti dalla stessa sostanza e misurati alle medesime condizioni di pressione e temperatura,
+ allora tra la misura della loro massa e la misura del loro volume è presente una proporzionalità diretta.
 \end_layout
 
 \begin_layout Part*
@@ -150,6 +149,80 @@ Cenni teorici
 \end_layout
 
 \begin_layout Standard
+La densità è definita come massa per unità di volume:
+ 
+\begin_inset Formula $d=m/v$
+\end_inset
+
+.
+ Corpi di forme diverse hanno lo stesso valore di densità se:
+\end_layout
+
+\begin_layout Standard
+-sono fatti della sostanza
+\end_layout
+
+\begin_layout Standard
+-le misure di massa e volume dei diversi corpi sono prese alle stesse condizioni di massa e volume
+\end_layout
+
+\begin_layout Part*
+Presa dati
+\end_layout
+
+\begin_layout Standard
+Per la presa dati sono stati utilizzati:
+\end_layout
+
+\begin_layout Enumerate
+calibro Palmer,
+ avendo risoluzione di 0,01mm è stato usato per la misurazione delle lunghezze più piccole:
+\end_layout
+
+\begin_layout Verse
+-diametri delle sferette di acciaio
+\end_layout
+
+\begin_layout Verse
+-diametri e altezze dei cilindri di alluminio
+\end_layout
+
+\begin_layout Verse
+-lati dei parallelepipedi di alluminio
+\end_layout
+
+\begin_layout Verse
+-lati minori dei paralellepipedi di ottone
+\end_layout
+
+\begin_layout Verse
+-diametro dei cilindri di ottone
+\end_layout
+
+\begin_layout Verse
+-distanza tra lati paralleli del parallelepipedo a base esagonale di ottone.
+\end_layout
+
+\begin_layout Enumerate
+calibro ventesimale,
+ avendo risoluzione di 0,05mm è stato usato per la misurazione delle lunghezze piu grandi:
+\end_layout
+
+\begin_layout Verse
+-lunghezza del ciclindro 
+\end_layout
+
+\begin_layout Verse
+-lati maggiori dei parallellepipedi di ottone 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
 
 \end_layout
 
