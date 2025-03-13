@@ -12,12 +12,12 @@ for step in range(3):
     dx = np.cos(phi)
     dy = np.sin(phi)
     
-    # Update the position
+    #reset origin
     new_x = points[-1][0] + dx
     new_y = points[-1][1] + dy
     points.append((new_x, new_y))
     
-    # Print the angle and new coordinates
+    #sends the new info to the plot
     print(f"Step {step + 1}:")
     print(f"Random angle: {np.degrees(phi):.2f}°")
     print(f"New coordinates: ({new_x:.4f}, {new_y:.4f})\n")
@@ -35,7 +35,7 @@ plt.plot(x_coords[0], y_coords[0], 'go', markersize=8, label='Origin')  #we can 
 for i, (x, y) in enumerate(points):
     plt.text(x, y, f' {i}', fontsize=12, ha='left', va='bottom')
 
-plt.title('3-Step Random Walk with Unit Length Steps')
+plt.title('random walk')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.legend()
