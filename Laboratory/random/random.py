@@ -2,23 +2,29 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-phi = np.random.uniform(0, np.pi/2)
+phi = np.random.uniform(0, np.2*pi)
+dist = 1
+originx = 0
+originy = 0
 
 #to cartesian
 x = np.cos(phi)
 y = np.sin(phi)
 
-print(f"Random angle: {np.degrees(theta):.2f}°")
+print(f"Random angle: {np.degrees(phi):.2f}°")
 print(f"Coordinates: ({x:.4f}, {y:.4f})")
 
 # Plot the point
-plt.figure(figsize=(5, 5))
-plt.scatter(x, y, color='red', label=f'Angle: {np.degrees(theta):.2f}°')
-plt.xlim(-0.1, 1.1)
-plt.ylim(-0.1, 1.1)
+plt.figure(figsize=(-5, 5))
+plt.scatter(x, y, color='red', label=f'Angle: {np.degrees(phi):.2f}°')
+
+
+
+plt.xlim(-1, 1)
+plt.ylim(-1, 1)
 plt.grid(True)
 plt.legend()
-plt.title('Random Direction in First Quadrant (0°-90°)')
+plt.title('bob')
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.show()
