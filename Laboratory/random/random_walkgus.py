@@ -20,7 +20,7 @@ distances = [random_journey(100) for _ in range(1000)]
 plt.figure(figsize=(10, 6))
 
 #plot histogram
-plt.hist(distances, bins=30, density=True, 
+plt.hist(distances, bins=100, density=True, 
         alpha=0.6, color='blue', edgecolor='black', 
         label='Walk Results')
 
