@@ -15,7 +15,7 @@ def random_journey(steps=100):
     return np.sqrt(x**2 + y**2)  #fin distance
 
 # 200 cigarets 
-distances = [random_journey(100) for _ in range(1000)]
+distances = [random_journey(100) for _ in range(100000)]
 
 plt.figure(figsize=(10, 6))
 
