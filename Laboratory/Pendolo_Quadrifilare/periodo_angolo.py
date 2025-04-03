@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit 
 
 t = [2.517249, 3.57361, 4.629958, 5.68628, 6.742587, 7.798921, 8.855212, 9.911506, 10.967796, 12.024066, 13.080341, 14.136583, 15.192815, 16.249049, 17.305299, 18.361538, 19.417754, 20.473957, 21.530154, 22.586316, 23.642492, 24.698673, 25.754811, 26.81094, 27.86708, 28.923203, 29.979318, 31.035416, 32.091496, 33.147564, 34.203623, 35.259682, 36.315737, 37.371797, 38.427843, 39.483855, 40.539863, 41.595862, 42.651835, 43.707798, 44.763789, 45.819749, 46.875699, 47.931645, 48.987589, 50.043515, 51.099443, 52.155348, 53.211256, 54.26714, 55.323003, 56.378872, 57.434722, 58.49055, 59.546408, 60.60222, 61.658023, 62.713816, 63.769613, 64.825371, 65.881136, 66.936905, 67.992684, 69.048415, 70.104166, 71.159921, 72.215661, 73.271408, 74.327136, 75.382821, 76.438475, 77.49413, 78.54979, 79.605467, 80.661144, 81.716772, 82.772394, 83.828009, 84.883632, 85.939237, 86.994833, 88.050441, 89.106045, 90.161618, 91.217186, 92.272705]
 t_transit = [0.032222, 0.032304, 0.032384, 0.032468, 0.032554, 0.032626, 0.032708, 0.0328, 0.032888, 0.032976, 0.033058, 0.033138, 0.033226, 0.03331, 0.033394, 0.03348, 0.033564, 0.033646, 0.033732, 0.03382, 0.033904, 0.033986, 0.034078, 0.034168, 0.034256, 0.034346, 0.034424, 0.034512, 0.034604, 0.034696, 0.034786, 0.034868, 0.034954, 0.035038, 0.035126, 0.035222, 0.035314, 0.0354, 0.035486, 0.03558, 0.03567, 0.035758, 0.035838, 0.03593, 0.03603, 0.036122, 0.036222, 0.036316, 0.0364, 0.036476, 0.036562, 0.036668, 0.036764, 0.036852, 0.036956, 0.037056, 0.037138, 0.037224, 0.037314, 0.037406, 0.037504, 0.037606, 0.0377, 0.037794, 0.037892, 0.037974, 0.038062, 0.038164, 0.038272, 0.038374, 0.03847, 0.03856, 0.038652, 0.038742, 0.03884, 0.038948, 0.039036, 0.039122, 0.03924, 0.039338, 0.039426, 0.039534, 0.03963, 0.039724, 0.039816, 0.039922]
@@ -9,6 +10,7 @@ l = 109.65
 d = 115.25
 w = 1.9
 grav_constant = 9.81
+
 
 
 v0 = (w / np.array(t_transit)) * (l / d)
@@ -36,13 +38,22 @@ periodo = [
 ]
 
 angle = np.arccos(1 - (v0**2) / (2 * grav_constant * l))
-
+ 
 print("plotting")
 
 x = angle
 y = periodo
-yerr = 0.001
-xerr = 0.001
+
+# Define the theoretical model to fit
+def model_func(theta, a, b):
+    return 2 * np.pi * np.sqrt(l / grav_constant) * (1 + a * theta**2 + b * theta**4)
+
+# Perform nonlinear curve fitting
+popt, pcov = curve_fit(model_func, x, y, p0=[0, 0])
+a_fit, b_fit = popt
+
+yerr = 0.000000000000001
+xerr = 0.000000000000001
 
 # Create figure
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -51,21 +62,19 @@ fig, ax = plt.subplots(figsize=(10, 6))
 ax.errorbar(x, y, yerr=yerr, xerr=xerr, fmt='o', 
            markersize=8, capsize=5, label='raw data')
 
-# Single fit for all points (linear regression)
-coefficients = np.polyfit(x, y, 1)
-best_fit = np.poly1d(coefficients)
-x_fit = np.linspace(min(x)-0.5, max(x)+0.5, 100)
-ax.plot(x_fit, best_fit(x_fit), 'r--', 
-        label=f'Best Fit: y = {coefficients[0]:.2f}x + {coefficients[1]:.2f}')
+# Generate fitted curve
+x_fit = np.linspace(min(x), max(x), 100)
+y_fit = model_func(x_fit, a_fit, b_fit)
+ax.plot(x_fit, y_fit, 'r--', 
+        label=f'Fit: $T = 2\pi\\sqrt{{l/g}}(1 + {a_fit:.5f}\\theta^2 + {b_fit:.5f}\\theta^4)$')
 
-# Formatting with adjusted axis ranges
-ax.set ( #xlim=(0, 3),  
-   #    ylim=(0, 3), 
-       xlabel='Angle',
+# Formatting
+ax.set(xlabel='Angle',
        ylabel='Period',
-       title='Angle vs Period ')
+       title='Angle vs Period')
 ax.legend()
 ax.grid(True, linestyle='--', alpha=0.6)
 
 plt.tight_layout()
 plt.show()
+
